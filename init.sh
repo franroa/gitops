@@ -5,11 +5,11 @@ k3d cluster create fran
 
 
 # Working without helm releases
-#fluxctl install \
-#  --namespace flux \
-#  --git-url "git@github.com:franroa/gitops.git" \
-#  --git-user franroa \
-#  --git-email "franroa@users.noreply.github.com" | kubectl apply -f -
+fluxctl install \
+  --namespace flux \
+  --git-url "git@github.com:franroa/gitops.git" \
+  --git-user franroa \
+  --git-email "franroa@users.noreply.github.com" | kubectl apply -f -
 
 
 # TODO -> Sign commits with GPG

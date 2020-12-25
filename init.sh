@@ -5,6 +5,8 @@ k3d cluster create fran
 
 helm repo add fluxcd https://charts.fluxcd.io
 
+kubectl create ns flux
+
 # Working without helm releases
 fluxctl install \
   --namespace flux \
@@ -13,8 +15,6 @@ fluxctl install \
   --git-email "franroa@users.noreply.github.com" | kubectl apply -f -
 
 # TODO -> Sign commits with GPG
-
-kubectl create ns flux
 
 kubectl apply -f https://raw.githubusercontent.com/fluxcd/helm-operator/1.2.0/deploy/crds.yaml
 
@@ -47,6 +47,8 @@ helm repo add flagger https://flagger.app
 helm install flagger flagger/flagger \
     -n kube-system \
     --set prometheus.install=true --set meshProvider=nginx
+
+fluxctl identity --k8s-fwd-ns flux
 
 
 

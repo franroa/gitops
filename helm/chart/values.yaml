@@ -8,7 +8,7 @@ color: black
 
 image:
   repository: nbrown/nginxhello
-  tag: 1.19.0
+  tag: 1.19.27
   pullPolicy: IfNotPresent
 
 serviceAccount:

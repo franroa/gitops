@@ -11,9 +11,7 @@ fluxctl install \
   --git-user franroa \
   --git-email "franroa@users.noreply.github.com" | kubectl apply -f -
 
-
 # TODO -> Sign commits with GPG
-
 
 kubectl create ns flux
 

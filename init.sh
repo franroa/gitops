@@ -59,4 +59,4 @@ helm install flagger flagger/flagger \
 #      host: 172.22.0.2.nip.io
 #EOF
 
-while true; do curl -s -o /dev/null http://172.22.0.2.nip.io; done &
+#while true; do curl -s -o /dev/null http://172.22.0.2.nip.io; done &

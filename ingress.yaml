@@ -5,7 +5,7 @@ metadata:
     app: nginxhello
   name: single-default-backend-ingress
   annotations:
-    fluxcd.io/ignore: "false"
+    fluxcd.io/ignore: "true"
 spec:
   backend:
     serviceName: nginxhello

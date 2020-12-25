@@ -3,7 +3,6 @@
 k3d cluster delete fran
 k3d cluster create fran
 
-
 # Working without helm releases
 fluxctl install \
   --namespace flux \

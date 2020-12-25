@@ -13,3 +13,8 @@ spec:
   rollback:
     enable: true
     retry: true
+  values:
+    image:
+      tag: 1.19.1
+    ingress:
+      host: 172.22.0.2.nip.io

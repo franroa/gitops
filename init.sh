@@ -47,3 +47,16 @@ helm repo add flagger https://flagger.app
 helm install flagger flagger/flagger \
     -n kube-system \
     --set prometheus.install=true --set meshProvider=nginx
+
+
+
+#curl -s 172.22.0.2.nip.io | grep Version
+#cat <<EOF >> helm/nginxhello-hr.yaml
+#  values:
+#    image:
+#      tag: 1.19.1
+#    ingress:
+#      host: 172.22.0.2.nip.io
+#EOF
+
+while true; do curl -s -o /dev/null http://172.22.0.2.nip.io; done &

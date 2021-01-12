@@ -51,9 +51,6 @@ fluxctl identity --k8s-fwd-ns flux
 
 
 
-
-
-
 #curl -s 172.22.0.2.nip.io | grep Version
 #cat <<EOF >> helm/nginxhello-hr.yaml
 #  values:

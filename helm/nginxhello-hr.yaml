@@ -14,6 +14,7 @@ spec:
     enable: true
     retry: true
   values:
+    replicaCount: 3
     image:
       tag: 1.19.1
     ingress:

@@ -4,7 +4,7 @@ metadata:
   name: nginxhello-canary
   namespace: default
   annotations:
-    fluxcd.io/ignore: "false"
+    fluxcd.io/ignore: "true"
 spec:
   provider: nginx
   targetRef:

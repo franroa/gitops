@@ -1,7 +1,8 @@
 #!/bin/bash
 
 k3d cluster delete fran
-k3d cluster create fran
+# Flagger does not support traefik
+k3d cluster create fran --k3s-server-arg '--no-deploy=traefik'
 
 helm repo add fluxcd https://charts.fluxcd.io
 
@@ -27,9 +28,6 @@ helm install helm-operator fluxcd/helm-operator \
 
 # TODO -> helm repo vs git repo
 
-# Flagger does not support traefik
-helm -n kube-system uninstall traefik
-# Instead traefik, we will install ingress-ngnix
 
 helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
 
@@ -49,6 +47,10 @@ helm install flagger flagger/flagger \
     --set prometheus.install=true --set meshProvider=nginx
 
 fluxctl identity --k8s-fwd-ns flux
+
+
+
+
 
 
 
